@@ -10,7 +10,7 @@
 <ion-content padding>
   <b>Amigos</b>
   <ng-container *ngFor="let user of friends; let i = index" >    
-    <p *ngIf="user.friend" >
+    <p (click)="goToConversation(user)" *ngIf="user.friend" >
       {{ i }}. {{ user.nick }} - {{ user.email }}
     </p>         
   </ng-container>

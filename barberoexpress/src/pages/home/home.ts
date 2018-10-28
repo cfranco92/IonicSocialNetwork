@@ -25,14 +25,22 @@ export class HomePage {
       age: 26,
       email: 'alejbert@gmail.com',
       friend: false,
-      uid: 1
+      uid: 2
+    };
+    let user3: User = {
+      nick: 'Sebastián',
+      subnick: 'alejbert',
+      age: 26,
+      email: 'alejbert@gmail.com',
+      friend: true,
+      uid: 3
     };
     this.friends = [user1, user2];
     console.log(user1);
   }
 
-  goToConversation(){
-    this.navCtrl.push(ConversationPage);
+  goToConversation(user){
+    this.navCtrl.push(ConversationPage, {user: user});
   }
 
   goToLogin(){
