@@ -24,7 +24,7 @@ export class HomePage {
       subnick: 'alejbert',
       age: 26,
       email: 'alejbert@gmail.com',
-      friend: true,
+      friend: false,
       uid: 1
     };
     this.friends = [user1, user2];

@@ -8,9 +8,18 @@
 </ion-header>
 
 <ion-content padding>
-  <p *ngFor="let user of friends; let i = index">
-        {{ i }}. {{ user.nick }} - {{ user.email }}
-  </p>           
+  <b>Amigos</b>
+  <ng-container *ngFor="let user of friends; let i = index" >    
+    <p *ngIf="user.friend" >
+      {{ i }}. {{ user.nick }} - {{ user.email }}
+    </p>         
+  </ng-container>
+  <b>No Agregados</b>
+  <ng-container *ngFor="let user of friends; let i = index" >    
+    <p *ngIf="!user.friend" >
+      {{ i }}. {{ user.nick }} - {{ user.email }}
+    </p>           
+  </ng-container>  
   <button ion-button (click)="goToConversation()">Ir a Conversation</button> 
   <button ion-button (click)="goToLogin()">Ir a Conversation</button> 
 </ion-content>
