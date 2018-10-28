@@ -1,3 +1,8 @@
+import { AboutPageModule } from './../pages/about/about.module';
+import { ProfilePageModule } from './../pages/profile/profile.module';
+import { ConversationPageModule } from './../pages/conversation/conversation.module';
+import { LoginPageModule } from './../pages/login/login.module';
+import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -18,12 +23,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    LoginPageModule,
+    ConversationPageModule,
+    ProfilePageModule,
+    AboutPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage    
   ],
   providers: [
     StatusBar,
