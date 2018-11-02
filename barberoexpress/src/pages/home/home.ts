@@ -11,6 +11,7 @@ import { LoginPage } from '../login/login';
 })
 export class HomePage {
   friends: User[];
+  query: string = '';
   constructor(public navCtrl: NavController, private userServices: UserServices) {
     this.friends = this.userServices.getFriends();
   }

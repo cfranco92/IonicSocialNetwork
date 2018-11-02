@@ -1,3 +1,4 @@
+import { SearchPipe } from './../pages/pipes/search';
 import { UserServices } from './../services/user.service';
 import { AboutPageModule } from './../pages/about/about.module';
 import { ProfilePageModule } from './../pages/profile/profile.module';
@@ -13,12 +14,14 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPageModule,
     ConversationPageModule,
     ProfilePageModule,
-    AboutPageModule
+    AboutPageModule,
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
