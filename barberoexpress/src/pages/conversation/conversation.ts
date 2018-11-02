@@ -15,10 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'conversation.html',
 })
 export class ConversationPage {
-  user: User;
+  friend: User;  
+  friends: User[];
+  price: number = 78.1231312312;
+  today: any = Date.now();
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.user = this.navParams.get('user');
-    console.log("User", this.user);
+    this.friend = this.navParams.get('user');  
+    let friendId = this.friend.uid;    
+    this.friends = this.navParams.get('users');
+    console.log("User", this.friend);
+    console.log("UserID", friendId);
+    console.log("Users", this.friends);
   }
 
   ionViewDidLoad() {

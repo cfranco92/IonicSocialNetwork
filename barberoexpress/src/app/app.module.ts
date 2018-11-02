@@ -1,3 +1,4 @@
+import { UserServices } from './../services/user.service';
 import { AboutPageModule } from './../pages/about/about.module';
 import { ProfilePageModule } from './../pages/profile/profile.module';
 import { ConversationPageModule } from './../pages/conversation/conversation.module';
@@ -36,7 +37,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserServices
   ]
 })
 export class AppModule {}
